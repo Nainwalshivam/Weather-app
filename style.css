@@ -1,0 +1,111 @@
+body {
+  font-family: 'Verdana', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #00796b;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.weather-input {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.city-input {
+  padding: 12px;
+  width: 80%; /* Adjust width for larger screens */
+  margin: 10px 0;
+  border: 2px solid #00796b;
+  border-radius: 5px;
+  font-size: 18px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+.search-btn, .location-btn {
+  background: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+  width: 40%; /* Set width for buttons */
+}
+.search-btn:hover, .location-btn:hover {
+  background: #004d40;
+}
+.separator {
+  margin: 20px 0;
+  border-top: 1px solid #00796b;
+}
+.weather-data {
+  margin-top: 20px;
+}
+.current-weather {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #b2ebf2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.days-forecast {
+  margin-top: 20px;
+}
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style-type: none;
+}
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(20% - 20px);
+  min-width: 150px;
+}
+.card h3 {
+  margin: 0;
+  color: #00796b;
+}
+.card h6 {
+  margin: 5px 0;
+  font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city-input {
+      width: 90%; /* Use a larger percentage for better fit */
+  }
+  .search-btn, .location-btn {
+      width: 90%; /* Make buttons wider on small screens */
+      padding: 12px;
+      margin: 5px 0;
+  }
+  .weather-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+  .card {
+      flex: 1 1 100%; /* Stack cards vertically */
+      margin: 10px 0;
+  }
+}
